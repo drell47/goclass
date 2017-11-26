@@ -1,0 +1,59 @@
+
+sqlite3 mydatabase.db
+
+create table names (id integer, first varchar(20), last varchar(20));
+
+
+
+# sqlite3 tecadmin.db
+sqlite> create table users(uid integer,uname varchar(60),category varchar(50));
+sqlite> create table posts(postid integer,postname varchar(50),content varchar(1000));
+sqlite> create table tmp(id integer,tname varchar(50);
+sqlite> .quit
+
+LIST TABLES 
+    .tables
+
+DROP TABLE
+    drop table tmp;
+    drop table if exists tmp;
+
+INSERT DATA IN TABLES
+sqlite> INSERT INTO posts VALUES(1, 'Post 1','this is demo post 1');
+sqlite> INSERT INTO posts VALUES(2, 'Post 2','this is demo post 2');
+sqlite> INSERT INTO users VALUES(1,'Harry','staff');
+sqlite> INSERT INTO users VALUES(2,'Rahul','Admin');
+
+
+EXECUTE COMMANDS FROM A FILE
+	# sqlite3 tecadmin.db < data.sql
+
+FETCH DATA FROM TABLES
+sqlite> SELECT * FROM users;
+1|Harry|staff
+2|Rahul|Admin
+10|Sarah|Support
+11|Nick|Sales
+
+sqlite> SELECT * FROM posts;
+1|Post 1|this is demo post 1
+2|Post 2|this is demo post 2
+10|Sample Post 10|this is sample post 10
+11|Sample Post 11|this is sample post 11
+
+sqlite> SELECT * FROM posts WHERE postid = 1;
+1|Post 1|this is demo post 1
+
+=============
+OUTPUT MODES
+  .mode line    - each item on separate line
+  .mode column  - each row on a line
+
+SAVE AND RESTORE TO ASCII FILE
+# sqlite3 tecadmin.db '.dump' > backup.dump
+To reconstruct the SQLite database from ASCII file backup.dump just type
+# cat backup.dump | sqlite3 tecadmin-1.db
+
+
+
+

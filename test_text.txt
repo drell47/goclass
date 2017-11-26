@@ -1,0 +1,3 @@
+this is A Test of Lines
+which have lowercase
+and SOME uppercase

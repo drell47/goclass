@@ -4,9 +4,10 @@ import (
 	"fmt"
 
 	// "github.com/user/stringutil"
-	"stringutil"
+	"github.com/drell47/goclass/stringutil"
 )
 
 func main() {
 	fmt.Printf(stringutil.Reverse("!oG ,olleH"))
+	fmt.Printf("\n")
 }

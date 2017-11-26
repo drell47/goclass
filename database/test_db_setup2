@@ -1,0 +1,17 @@
+
+Test database
+
+$ sqlite3 scientists.db
+SQLite version 3.20.1 2017-08-24 16:21:36
+Enter ".help" for usage hints.
+sqlite> CREATE TABLE name (id INTEGER, first VARCHAR(20), last VARCHAR(20), state BOOLEAN);
+sqlite> 
+
+
+INSERT INTO name VALUES(1, 'Francis','Drake', 1);
+INSERT INTO name VALUES(2, 'Johnny','Flabadoe', 1);
+INSERT INTO name VALUES(3, 'Melvin','Toomey', 1);
+INSERT INTO name VALUES(4, 'Chuckie','Cheese', 1);
+
+.quit
+
